@@ -1,0 +1,6 @@
+c:\users\daniel\documents\visual studio 2013\Projects\ResurseUmane\ResurseUmane\bin\ResurseUmane.dll.config
+c:\users\daniel\documents\visual studio 2013\Projects\ResurseUmane\ResurseUmane\bin\ResurseUmane.dll
+c:\users\daniel\documents\visual studio 2013\Projects\ResurseUmane\ResurseUmane\bin\ResurseUmane.pdb
+c:\users\daniel\documents\visual studio 2013\Projects\ResurseUmane\ResurseUmane\obj\Debug\ResurseUmane.dll
+c:\users\daniel\documents\visual studio 2013\Projects\ResurseUmane\ResurseUmane\obj\Debug\ResurseUmane.pdb
+c:\users\daniel\documents\visual studio 2013\Projects\ResurseUmane\ResurseUmane\obj\Debug\ResurseUmane.csprojResolveAssemblyReference.cache

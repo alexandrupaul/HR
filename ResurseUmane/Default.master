@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="ResurseUmane.Default1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="centered">HR App</div>
+        </header>
+        <nav class="navigation"><!--
+            --><ul><!--
+                --><li>
+                    <a href="Default.aspx">Home</a>
+                </li><!--
+                --><li>
+                    <a href="#">Entitati</a>
+                    <ul>
+                        <li><a href="Angajati.aspx">Angajati</a></li>
+                        <li><a href="Banci.aspx">Banci</a></li>
+                        <li><a href="Orase.aspx">Orase</a></li>
+                        <li><a href="Studii.aspx">Studii</a></li>
+                        <li><a href="Functii.aspx">Functii</a></li>
+                    </ul>
+                </li><!--
+            --></ul>
+        </nav>
+        <form id="form1" runat="server">
+            <div class="centered padding-10">
+                <asp:ContentPlaceHolder ID="pagesLoader" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+        <footer></footer>
+    </div>
+</body>
+</html>

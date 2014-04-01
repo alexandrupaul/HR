@@ -1,0 +1,130 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* app styles */
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    width: 100%;
+    height: 150px;
+    background: #808080;
+}
+header div {
+    padding: 30px;
+    font-size: 55px;
+}
+.centered {
+    width: 960px;
+    margin: 0 auto;
+}
+.padding-10 {
+    padding: 10px;
+}
+.navigation {
+    width: 100%;
+    height: 40px;
+    background: #ccc;
+}
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 5px;
+}
+    .navigation ul li {
+        display: inline-block;
+        position: relative;
+        background: #484848;
+        padding: 12px;
+        min-width: 100px;
+        text-align: center;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+.navigation ul li:hover {
+    background: #eee;
+}
+.navigation ul li:hover > a {
+    color: #000;
+}
+.navigation ul li > ul {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -12px;
+}
+.navigation ul li:hover > ul {
+    display: block;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.grid {
+    width: 500px;
+}
+.grid .col-1,
+.grid .col-2 {
+    display: inline-block;
+}
+.grid .col-1 {
+    min-width: 100px;
+}
