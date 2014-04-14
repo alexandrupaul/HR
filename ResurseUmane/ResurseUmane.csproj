@@ -57,12 +57,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angajati.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Functii.aspx" />
+    <Content Include="Orase.aspx" />
+    <Content Include="Studii.aspx" />
     <Content Include="styles.css" />
     <Content Include="Banci.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Angajati.aspx.cs">
+      <DependentUpon>Angajati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Angajati.aspx.designer.cs">
+      <DependentUpon>Angajati.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BusinessLogic\BusinessLogic.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -79,6 +90,20 @@
       <DependentUpon>Default.master</DependentUpon>
     </Compile>
     <Compile Include="Entities\Entities.cs" />
+    <Compile Include="Functii.aspx.cs">
+      <DependentUpon>Functii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Functii.aspx.designer.cs">
+      <DependentUpon>Functii.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orase.aspx.cs">
+      <DependentUpon>Orase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orase.aspx.designer.cs">
+      <DependentUpon>Orase.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Banci.aspx.cs">
       <DependentUpon>Banci.aspx</DependentUpon>
@@ -86,6 +111,13 @@
     </Compile>
     <Compile Include="Banci.aspx.designer.cs">
       <DependentUpon>Banci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Studii.aspx.cs">
+      <DependentUpon>Studii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Studii.aspx.designer.cs">
+      <DependentUpon>Studii.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\SQL.cs" />
   </ItemGroup>
