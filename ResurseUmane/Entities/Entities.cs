@@ -27,8 +27,8 @@ namespace ResurseUmane.Entities
             public DateTime DataIncheiereContract{get;set;}
             public char Gen{get;set;}
             public  string IBAN {get;set;}
-            public string Banca{get;set;}
-	        
+            public int Id_banca{get;set;}
+            public int Id_orase { get; set;}
 	
         }
 
@@ -41,11 +41,18 @@ namespace ResurseUmane.Entities
         {
             public string DenumireStudii { get; set; }
             public int Nivel { get; set; }
+            public bool ScutireImpozit { get; set; }
         }
 
         public class Functii
         {
             public string DenumireFunctii { get; set; }
+        }
+
+        public class Departamente
+        {
+            public string Denumire_dpt { get; set; }
+            public int Marca_manager { get; set; }
         }
     }
 }

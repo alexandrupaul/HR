@@ -10,42 +10,51 @@
 namespace ResurseUmane {
     
     
-    public partial class Functii {
+    public partial class Departamente {
         
         /// <summary>
-        /// txtDenumireFunctii control.
+        /// txtNumeDepartament control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDenumireFunctii;
+        protected global::System.Web.UI.WebControls.TextBox txtNumeDepartament;
         
         /// <summary>
-        /// btnAdaugaFunctie control.
+        /// txtMarcaManager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAdaugaFunctie;
+        protected global::System.Web.UI.WebControls.TextBox txtMarcaManager;
         
         /// <summary>
-        /// lblFunctii control.
+        /// btnAdaugaDepartament control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFunctii;
+        protected global::System.Web.UI.WebControls.Button btnAdaugaDepartament;
         
         /// <summary>
-        /// gridFunctii control.
+        /// lblDepartament control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridFunctii;
+        protected global::System.Web.UI.WebControls.Label lblDepartament;
+        
+        /// <summary>
+        /// gridDepartamente control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridDepartamente;
     }
 }

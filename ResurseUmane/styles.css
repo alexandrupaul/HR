@@ -92,7 +92,7 @@ header div {
         position: relative;
         background: #484848;
         padding: 12px;
-        min-width: 100px;
+        min-width: 200px;
         text-align: center;
         -moz-transition: all 0.2s;
         -o-transition: all 0.2s;
@@ -128,3 +128,23 @@ fieldset {
 .grid .col-1 {
     min-width: 200px;
 }
+
+table {
+    width: 100%;
+    font-size: 12px;
+}
+table tr {
+    background-color: #eee;
+}
+    table tr:nth-child(2n+1) {
+        background-color: #ccc;
+    }
+    table td,
+    table th {
+        padding: 10px 5px;
+        border-right: 1px solid #a1a1a1;
+    }
+    table th {
+        background-color: #1a1a1a;
+        color: #eee;
+    }

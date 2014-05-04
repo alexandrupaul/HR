@@ -58,6 +58,15 @@ namespace ResurseUmane {
         protected global::System.Web.UI.WebControls.TextBox txtAdresa;
         
         /// <summary>
+        /// dropDownOrase control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropDownOrase;
+        
+        /// <summary>
         /// txtNationalitate control.
         /// </summary>
         /// <remarks>
@@ -103,13 +112,13 @@ namespace ResurseUmane {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtDataIncheiereContract;
         
         /// <summary>
-        /// txtGen control.
+        /// dropDownGen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGen;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownGen;
         
         /// <summary>
         /// txtIBAN control.
@@ -121,13 +130,13 @@ namespace ResurseUmane {
         protected global::System.Web.UI.WebControls.TextBox txtIBAN;
         
         /// <summary>
-        /// txtBanca control.
+        /// dropDownBanca control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBanca;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownBanca;
         
         /// <summary>
         /// btnAdaugaAngajat control.
@@ -146,5 +155,68 @@ namespace ResurseUmane {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAngajat;
+        
+        /// <summary>
+        /// txtFiltruCnp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFiltruCnp;
+        
+        /// <summary>
+        /// txtFiltruNume control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFiltruNume;
+        
+        /// <summary>
+        /// txtFiltruPrenume control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFiltruPrenume;
+        
+        /// <summary>
+        /// dataAngajareStart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dataAngajareStart;
+        
+        /// <summary>
+        /// dataAngajareEnd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dataAngajareEnd;
+        
+        /// <summary>
+        /// btnFiltreazaAngajati control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFiltreazaAngajati;
+        
+        /// <summary>
+        /// gridAngajati control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridAngajati;
     }
 }

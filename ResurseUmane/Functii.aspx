@@ -23,4 +23,9 @@
             </div>
         </div>
     </fieldset>
+    <fieldset>
+        <legend>Vizualizeaza functiile existente</legend>
+        <asp:GridView runat="server" ID="gridFunctii"></asp:GridView>
+        
+    </fieldset>
 </asp:Content>

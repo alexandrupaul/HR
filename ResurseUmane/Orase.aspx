@@ -23,5 +23,12 @@
                 </div>
             </div>
         </div>
+
+        <fieldset>
+        <legend>Vizualizeaza orasele existente</legend>
+        <asp:GridView runat="server" ID="gridOrase"></asp:GridView>
+        
+    </fieldset>
+
     </fieldset>
 </asp:Content>

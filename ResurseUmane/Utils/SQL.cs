@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Configuration;
+
 
 namespace ResurseUmane.Utils
 {
@@ -13,6 +15,12 @@ namespace ResurseUmane.Utils
     {
         private SqlConnection sql;
         private SqlCommand sqlCmd;
+
+        public class Parameter
+        {
+            public string Key { get; set; }
+            public object Value { get; set; }
+        }
 
         public Procedure(string procedureName)
         {
@@ -24,6 +32,16 @@ namespace ResurseUmane.Utils
         public Procedure AddParameter(string paramName, object paramValue)
         {
             this.sqlCmd.Parameters.AddWithValue(paramName, paramValue);
+
+            return this;
+        }
+
+        public Procedure AddParameter(List<Procedure.Parameter> parameters)
+        {
+            foreach (var param in parameters)
+            {
+                this.AddParameter(param.Key, param.Value);
+            }
 
             return this;
         }
@@ -49,5 +67,35 @@ namespace ResurseUmane.Utils
 
             return 0;
         }
+
+        public DataTable ExecuteDataTable()
+        {
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                this.sql.Open();
+                if (this.sql.State == System.Data.ConnectionState.Open)
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(this.sqlCmd);
+                    da.Fill(dt);
+                    return dt;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                this.sql.Close();
+            }
+
+            return null;
+
+        }
+
     }
 }

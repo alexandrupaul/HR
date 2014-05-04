@@ -30,4 +30,13 @@
             </div>
         </div>
     </fieldset>
+    <br />
+    <asp:TextBox ID="txtFiltruBanci" runat="server"></asp:TextBox>
+    <asp:Button ID="btnFiltreazaBanci" runat="server" OnClick="btnFiltreazaBanci_Click" Text="Filtru" />
+    
+    <fieldset>
+        <legend>Vizualizeaza bancile existente</legend>
+        <asp:GridView runat="server" ID="gridBanci"></asp:GridView>
+        
+    </fieldset>
 </asp:Content>

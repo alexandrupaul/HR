@@ -22,6 +22,14 @@
             </div>
             <div class="row">
                 <div class="col-1">
+                    <span>Scutire impozit</span>
+                </div>
+                <div class="col-2">
+                    <asp:CheckBox runat="server" ID="chkScutireImpozit" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
                     <asp:Button ID="btnAdaugaStudii" runat="server" OnClick="btnAdaugaStudiu_Click" Text="Adauga studiu" />
                 </div>
                 <div class="col-2">
@@ -29,5 +37,13 @@
                 </div>
             </div>
         </div>
+    </fieldset>
+    <asp:TextBox ID="txtFiltruStudii" runat="server"></asp:TextBox>
+    <asp:Button ID="btnFiltreazaStudii" runat="server" OnClick="btnFiltreazaStudii_Click" Text="Filtru" />
+    
+    <fieldset>
+        <legend>Vizualizeaza studiile existente</legend>
+        <asp:GridView runat="server" ID="gridStudii"></asp:GridView>
+        
     </fieldset>
 </asp:Content>

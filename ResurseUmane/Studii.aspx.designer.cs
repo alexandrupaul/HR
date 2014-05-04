@@ -31,6 +31,15 @@ namespace ResurseUmane {
         protected global::System.Web.UI.WebControls.TextBox txtNivelStudii;
         
         /// <summary>
+        /// chkScutireImpozit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkScutireImpozit;
+        
+        /// <summary>
         /// btnAdaugaStudii control.
         /// </summary>
         /// <remarks>
@@ -47,5 +56,32 @@ namespace ResurseUmane {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblStudii;
+        
+        /// <summary>
+        /// txtFiltruStudii control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFiltruStudii;
+        
+        /// <summary>
+        /// btnFiltreazaStudii control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFiltreazaStudii;
+        
+        /// <summary>
+        /// gridStudii control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridStudii;
     }
 }

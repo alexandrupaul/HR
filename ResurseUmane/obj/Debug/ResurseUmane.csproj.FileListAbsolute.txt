@@ -9,3 +9,8 @@ C:\Users\Holy\Desktop\HR-d67dad643c2725823cbf5690212a6a822820cc30\ResurseUmane\b
 C:\Users\Holy\Desktop\HR-d67dad643c2725823cbf5690212a6a822820cc30\ResurseUmane\obj\Debug\ResurseUmane.dll
 C:\Users\Holy\Desktop\HR-d67dad643c2725823cbf5690212a6a822820cc30\ResurseUmane\obj\Debug\ResurseUmane.pdb
 C:\Users\Holy\Desktop\HR-d67dad643c2725823cbf5690212a6a822820cc30\ResurseUmane\obj\Debug\ResurseUmane.csprojResolveAssemblyReference.cache
+C:\Users\Holy\Documents\GitHub\HR\ResurseUmane\bin\ResurseUmane.dll
+C:\Users\Holy\Documents\GitHub\HR\ResurseUmane\bin\ResurseUmane.pdb
+C:\Users\Holy\Documents\GitHub\HR\ResurseUmane\obj\Debug\ResurseUmane.dll
+C:\Users\Holy\Documents\GitHub\HR\ResurseUmane\obj\Debug\ResurseUmane.pdb
+C:\Users\Holy\Documents\GitHub\HR\ResurseUmane\obj\Debug\ResurseUmane.csprojResolveAssemblyReference.cache

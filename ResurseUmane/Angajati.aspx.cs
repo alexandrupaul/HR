@@ -6,17 +6,42 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
+
 namespace ResurseUmane
 {
     public partial class Angajati : System.Web.UI.Page
     {
+        private BusinessLogic.BusinessLogic bl = new BusinessLogic.BusinessLogic();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                var angajatiTable = bl.Citeste("getAngajati");
+                gridAngajati.DataSource = angajatiTable;
+                gridAngajati.DataBind();
+
+                var oraseList = bl.Citeste("getOraseList");
+                dropDownOrase.DataSource = oraseList;
+                dropDownOrase.DataTextField = oraseList.Columns[1].ToString();
+                dropDownOrase.DataValueField = oraseList.Columns[0].ToString();
+                dropDownOrase.DataBind();
+
+                var banciList = bl.Citeste("getBanciList");
+                dropDownBanca.DataSource = banciList;
+                dropDownBanca.DataTextField = banciList.Columns[1].ToString();
+                dropDownBanca.DataValueField = banciList.Columns[0].ToString();
+                dropDownBanca.DataBind();
+            }
+
+
+           
+
 
         }
         protected void btnAdaugaAngajat_Click(object sender, EventArgs e)
         {
-            var bl = new BusinessLogic.BusinessLogic();
+            
 
             int marcaAngajat=0;
             Int32.TryParse(txtMarcaAngajat.Text,out marcaAngajat);
@@ -34,7 +59,7 @@ namespace ResurseUmane
             DateTime dataIncheiereContract;
             DateTime.TryParse(txtDataIncheiereContract.Value, out dataIncheiereContract);
             char gen;
-            Char.TryParse(txtGen.Text, out gen);
+            Char.TryParse(dropDownGen.SelectedValue, out gen);
             //string IBAN ;
             //string Banca;
 
@@ -52,13 +77,41 @@ namespace ResurseUmane
                 DataIncheiereContract = dataIncheiereContract,
                 Gen = gen,
                 IBAN = txtIBAN.Text,
-                Banca = txtBanca.Text
+                Id_banca = Convert.ToInt32(dropDownBanca.SelectedItem.Value),
+                Id_orase= Convert.ToInt32(dropDownOrase.SelectedItem.Value)
             }) ? "Angajatul a fost adaugat." : "Angajatul nu a putut fi adaugat.";
 
             
-            //lblBanci .Text = bl.AdaugaBanca(new Entities.Entities.Banca() { NumeBanci = txtNumeBanci.Text, Comision = comision }) ?
-            //"Banca a fost adaugata." : "Banca nu a putut fi adaugata.";
             
+            
+        }
+
+
+        protected void btnFiltreazaAngajati_Click(object sender, EventArgs e)
+        {
+            List<Utils.Procedure.Parameter> lst = new List<Utils.Procedure.Parameter>();
+            if (!String.IsNullOrEmpty(txtFiltruCnp.Text))
+            {
+                lst.Add(new Utils.Procedure.Parameter() { Key = "@Cnp", Value = txtFiltruCnp.Text });
+            }
+            if (!String.IsNullOrEmpty(txtFiltruNume.Text))
+            {
+                lst.Add(new Utils.Procedure.Parameter() { Key = "@Nume", Value = txtFiltruNume.Text });
+            }
+            if (!String.IsNullOrEmpty(txtFiltruPrenume.Text))
+            {
+                lst.Add(new Utils.Procedure.Parameter() { Key = "@Prenume", Value = txtFiltruPrenume.Text });
+            }
+            if (!String.IsNullOrEmpty(dataAngajareStart.Value))
+            {
+                lst.Add(new Utils.Procedure.Parameter() { Key = "@Data_angajare_start", Value = dataAngajareStart.Value });
+            }
+            if (!String.IsNullOrEmpty(dataAngajareEnd.Value))
+            {
+                lst.Add(new Utils.Procedure.Parameter() { Key = "@Data_angajare_end", Value = dataAngajareEnd.Value });
+            } 
+            gridAngajati.DataSource = bl.Citeste("getAngajati", lst);
+            gridAngajati.DataBind();
         }
     }
 }
