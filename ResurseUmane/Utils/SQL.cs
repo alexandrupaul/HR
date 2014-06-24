@@ -97,5 +97,31 @@ namespace ResurseUmane.Utils
 
         }
 
+        public List<DataTable> ExecuteDataTables()
+        {
+            var dts = new List<DataTable>();
+
+            try
+            {
+                this.sql.Open();
+                if (this.sql.State == ConnectionState.Open)
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(this.sqlCmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    foreach (var table in ds.Tables)
+                    {
+                        dts.Add((DataTable)table);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+            return dts;
+        }
+
     }
 }

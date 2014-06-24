@@ -81,5 +81,12 @@ namespace ResurseUmane.BusinessLogic
             return proc.ExecuteDataTable();
         }
 
+
+        public DataTable EditeazaEntitate(string id, string type)
+        {
+            var proc = new Procedure("dbo.editEntitati").AddParameter("@ID", id).AddParameter("@Type", type);
+            return proc.ExecuteDataTable();
+        }
+
     }
 }
