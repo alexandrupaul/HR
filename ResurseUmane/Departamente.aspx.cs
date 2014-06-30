@@ -46,17 +46,11 @@ namespace ResurseUmane
         {
             Response.Write(e.CommandArgument); 
             int rowNumber = Int32.Parse(e.CommandArgument.ToString());
-            DataRow dr = dtDepartamente.Rows[rowNumber];
+            GridViewRow gdrow = gridDepartamente.Rows[rowNumber];
+            var file = e.CommandName == "EditRow" ? "Edit.aspx" : "Delete.aspx";
+            //DataRow dr = dtDepartamente.Rows[rowNumber];
             string str = Path.GetFileName(Request.PhysicalPath).ToString();
-            Response.Redirect("Edit.aspx?ID=" + rowNumber + "&Type=" +  str.Substring(0,str.IndexOf('.')).ToLower());
+            Response.Redirect(file + "?ID=" + Convert.ToInt32(gdrow.Cells[2].Text) + "&Type=" + str.Substring(0, str.IndexOf('.')).ToLower());
         }
-
-        protected void EditRow(object sender, GridViewCommandEventArgs e)
-        {
-            
-        }
-            
-
-        
     }
 }

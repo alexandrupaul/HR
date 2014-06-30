@@ -149,7 +149,12 @@
     
     <fieldset>
         <legend>Vizualizeaza angajatii existenti</legend>
-        <asp:GridView runat="server" ID="gridAngajati"></asp:GridView>
+        <asp:GridView runat="server" ID="gridAngajati" OnRowCommand="gridAngajati_RowCommand">
+             <Columns>
+                <asp:ButtonField Text="Edit" CommandName="EditRow" />
+                <asp:ButtonField Text="Sterge" CommandName="DeleteRow" />
+            </Columns>
+        </asp:GridView>
         
     </fieldset>
 </asp:Content>

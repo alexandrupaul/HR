@@ -40,7 +40,8 @@
         <legend>Vizualizeaza departamentele existente</legend>
         <asp:GridView runat="server" ID="gridDepartamente" OnRowCommand="gridDepartamente_RowCommand">
             <Columns>
-                <asp:ButtonField Text="Edit" CommandName="EditRow"  />
+                <asp:ButtonField Text="Edit" CommandName="EditRow" />
+                <asp:ButtonField Text="Sterge" CommandName="DeleteRow" />
             </Columns>
         </asp:GridView>
         

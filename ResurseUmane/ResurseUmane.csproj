@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="Angajati.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Delete.aspx" />
     <Content Include="Departamente.aspx" />
     <Content Include="Edit.aspx" />
     <Content Include="Functii.aspx" />
@@ -92,6 +93,13 @@
     </Compile>
     <Compile Include="Default.master.designer.cs">
       <DependentUpon>Default.master</DependentUpon>
+    </Compile>
+    <Compile Include="Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Departamente.aspx.cs">
       <DependentUpon>Departamente.aspx</DependentUpon>

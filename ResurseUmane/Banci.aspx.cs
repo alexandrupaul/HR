@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ResurseUmane.BusinessLogic;
+using System.Data;
+using System.IO;
 
 namespace ResurseUmane
 {
@@ -12,13 +14,20 @@ namespace ResurseUmane
     {
 
         private BusinessLogic.BusinessLogic bl = new BusinessLogic.BusinessLogic();
+        private DataTable dtBanci;
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            var banciTable = bl.Citeste("getBanci");
+            dtBanci = banciTable;
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                var banciTable = bl.Citeste("getBanci");
-                gridBanci.DataSource = banciTable;
+                
+                gridBanci.DataSource = dtBanci;
                 gridBanci.DataBind();
             }
 
@@ -40,6 +49,16 @@ namespace ResurseUmane
             lst.Add(new Utils.Procedure.Parameter() { Key = "@Nume_banci", Value = txtFiltruBanci.Text });
             gridBanci.DataSource = bl.Citeste("getBanci", lst);
             gridBanci.DataBind();
+        }
+        protected void gridBanci_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            Response.Write(e.CommandArgument);
+            int rowNumber = Int32.Parse(e.CommandArgument.ToString());
+            GridViewRow gdrow = gridBanci.Rows[rowNumber];
+            var file = e.CommandName == "EditRow" ? "Edit.aspx" : "Delete.aspx";
+            string str = Path.GetFileName(Request.PhysicalPath).ToString();
+            Response.Redirect(file + "?ID=" + Convert.ToInt32(gdrow.Cells[2].Text)+ "&Type=" + str.Substring(0, str.IndexOf('.')).ToLower());
+
         }
     }
 }

@@ -43,7 +43,12 @@
     
     <fieldset>
         <legend>Vizualizeaza studiile existente</legend>
-        <asp:GridView runat="server" ID="gridStudii"></asp:GridView>
+        <asp:GridView runat="server" ID="gridStudii" OnRowCommand="gridStudii_RowCommand">
+            <Columns>
+                <asp:ButtonField Text="Edit" CommandName="EditRow" />
+                <asp:ButtonField Text="Sterge" CommandName="DeleteRow" />
+            </Columns>
+        </asp:GridView>
         
     </fieldset>
 </asp:Content>

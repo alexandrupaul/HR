@@ -26,7 +26,12 @@
 
         <fieldset>
         <legend>Vizualizeaza orasele existente</legend>
-        <asp:GridView runat="server" ID="gridOrase"></asp:GridView>
+        <asp:GridView runat="server" ID="gridOrase" OnRowCommand="gridOrase_RowCommand">
+            <Columns>
+                <asp:ButtonField Text="Edit" CommandName="EditRow" />
+                <asp:ButtonField Text="Sterge" CommandName="DeleteRow" />
+            </Columns>
+        </asp:GridView>
         
     </fieldset>
 

@@ -6,6 +6,7 @@ using ResurseUmane.Entities;
 using ResurseUmane.Utils;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 
 namespace ResurseUmane.BusinessLogic
@@ -87,6 +88,31 @@ namespace ResurseUmane.BusinessLogic
             var proc = new Procedure("dbo.editEntitati").AddParameter("@ID", id).AddParameter("@Type", type);
             return proc.ExecuteDataTable();
         }
+
+        public bool StergeEntitate(string id, string type)
+        {
+            return new Procedure("dbo.stergeEntitati").AddParameter("@ID", id).AddParameter("@Type", type).ExecuteNonQuery()!=0;
+        }
+
+        public List<string> ListParams(string procName)
+        {
+            List<string> paramList = new List<string>();
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["sql_Prod"].ConnectionString);
+            SqlCommand cmd = new SqlCommand(procName, conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conn.Open();
+            SqlCommandBuilder.DeriveParameters(cmd);
+
+
+            foreach (SqlParameter p in cmd.Parameters)
+            {
+                paramList.Add(p.ParameterName);
+            }
+            return paramList;
+        }
+
+        
 
     }
 }

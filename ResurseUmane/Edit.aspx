@@ -5,16 +5,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
     <style type="text/css">
         input, select {
-            display: block;
+            padding: 10px 20px;
+            display: inline-block;
+            min-width: 250px;        
         }
+        h2 {
+            font-size: 1.3em;
+            text-align: center;
+            margin: 15px 0px;
+        }
+            h2 a {
+                position: relative;
+                left: -350px;
+            }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Panel runat="server" ID="panel_Form">
+        <h2>
+            <a href="<%= Request.UrlReferrer %>">Inapoi &laquo;</a>
+            Editare <%= ModelType %>
+        </h2>
+        <br />
+        <asp:Panel runat="server" ID="panel_Form" CssClass="edit-form">
 
         </asp:Panel>
     </div>

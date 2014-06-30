@@ -1,6 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Banci.aspx.cs" Inherits="ResurseUmane.Banci" MasterPageFile="~/Default.master" %>
 
+
 <asp:Content ContentPlaceHolderID="pagesLoader" runat="server">
+    <script type="text/javascript">
+        $(".deleteLink").click(function () {
+            return confirm('Are you sure you wish to delete this record?');
+        });
+    </script>
     <fieldset>
         <legend>Adauga Banca</legend>
         <div class="grid">
@@ -36,7 +42,11 @@
     
     <fieldset>
         <legend>Vizualizeaza bancile existente</legend>
-        <asp:GridView runat="server" ID="gridBanci"></asp:GridView>
-        
+        <asp:GridView runat="server" ID="gridBanci" OnRowCommand="gridBanci_RowCommand">
+            <Columns>
+                <asp:ButtonField Text="Edit" CommandName="EditRow" />
+                <asp:ButtonField Text="Sterge" CommandName="DeleteRow"/>
+            </Columns>
+        </asp:GridView>
     </fieldset>
 </asp:Content>

@@ -16,7 +16,7 @@ namespace ResurseUmane.Entities
         public class Angajat
         {
             public int MarcaAngajati {get;set;}
-            public int CNP{get;set;}
+            public long CNP{get;set;}
             public string Nume {get;set;}
             public string Prenume{get;set;}
             public string Adresa {get;set;}
