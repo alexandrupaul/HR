@@ -18,6 +18,7 @@ namespace ResurseUmane
 
         protected void Page_PreInit(object sender, EventArgs e)
         {
+
             var banciTable = bl.Citeste("getBanci");
             dtBanci = banciTable;
         }

@@ -1,0 +1,6 @@
+*.dll
+*.pdb
+ResurseUmane\bin
+ResurseUmane\obj
+ResurseUmane\Properties
+*.designer.cs

@@ -2,11 +2,7 @@
 
 
 <asp:Content ContentPlaceHolderID="pagesLoader" runat="server">
-    <script type="text/javascript">
-        $(".deleteLink").click(function () {
-            return confirm('Are you sure you wish to delete this record?');
-        });
-    </script>
+    
     <fieldset>
         <legend>Adauga Banca</legend>
         <div class="grid">

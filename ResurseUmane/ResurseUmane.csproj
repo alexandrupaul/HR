@@ -58,12 +58,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Angajati.aspx" />
+    <Content Include="Concedii.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Delete.aspx" />
     <Content Include="Departamente.aspx" />
     <Content Include="Edit.aspx" />
     <Content Include="Functii.aspx" />
+    <Content Include="Inregistrare_concediu.aspx" />
+    <Content Include="Inregistrare_salariu.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Orase.aspx" />
+    <Content Include="Rapoarte.aspx" />
+    <Content Include="Salarii.aspx" />
     <Content Include="Studii.aspx" />
     <Content Include="styles.css" />
     <Content Include="Banci.aspx" />
@@ -80,6 +86,13 @@
       <DependentUpon>Angajati.aspx</DependentUpon>
     </Compile>
     <Compile Include="BusinessLogic\BusinessLogic.cs" />
+    <Compile Include="Concedii.aspx.cs">
+      <DependentUpon>Concedii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Concedii.aspx.designer.cs">
+      <DependentUpon>Concedii.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,6 +136,27 @@
     <Compile Include="Functii.aspx.designer.cs">
       <DependentUpon>Functii.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Inregistrare_concediu.aspx.cs">
+      <DependentUpon>Inregistrare_concediu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inregistrare_concediu.aspx.designer.cs">
+      <DependentUpon>Inregistrare_concediu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inregistrare_salariu.aspx.cs">
+      <DependentUpon>Inregistrare_salariu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inregistrare_salariu.aspx.designer.cs">
+      <DependentUpon>Inregistrare_salariu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Orase.aspx.cs">
       <DependentUpon>Orase.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,6 +172,21 @@
     <Compile Include="Banci.aspx.designer.cs">
       <DependentUpon>Banci.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Rapoarte.aspx.cs">
+      <DependentUpon>Rapoarte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rapoarte.aspx.designer.cs">
+      <DependentUpon>Rapoarte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Salarii.aspx.cs">
+      <DependentUpon>Salarii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Salarii.aspx.designer.cs">
+      <DependentUpon>Salarii.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Security.cs" />
     <Compile Include="Studii.aspx.cs">
       <DependentUpon>Studii.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

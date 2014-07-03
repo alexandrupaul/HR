@@ -54,5 +54,33 @@ namespace ResurseUmane.Entities
             public string Denumire_dpt { get; set; }
             public int Marca_manager { get; set; }
         }
+
+        public class Concedii
+        {
+            public int An { get; set; }
+            public int TotalZile { get; set; }
+            public int ZileRamase { get; set; }
+            public int MarcaAngajat { get; set; }
+        }
+
+        public class AlocareConcedii
+        {
+            public int MarcaAngajat { get; set; }
+            public DateTime DataStart { get; set; }
+            public DateTime DataEnd { get; set; }
+            public int NrZile { get; set; }
+        }
+
+        public class Salarii
+        {
+            public double SalariuBrut { get; set; }
+            public DateTime DataSalariu { get; set; }
+        }
+
+        public class AlocareSalarii
+        {
+            public int MarcaAngajat { get; set; }
+            public int IdSalariu { get; set; }
+        }
     }
 }

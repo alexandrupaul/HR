@@ -45,7 +45,7 @@ namespace ResurseUmane.Utils
 
             return this;
         }
-
+        
         public int ExecuteNonQuery()
         {
             try
@@ -121,6 +121,24 @@ namespace ResurseUmane.Utils
             }
 
             return dts;
+        }
+
+        public string ExecuteScalar()
+        {
+            try
+            {
+                this.sql.Open();
+                if (this.sql.State == ConnectionState.Open)
+                {
+                    return this.sqlCmd.ExecuteScalar().ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+            return null;
         }
 
     }

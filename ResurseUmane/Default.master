@@ -12,7 +12,12 @@
 <body>
     <div class="wrapper">
         <header>
-            <div class="centered">HR App</div>
+            <div class="topbar">
+                <a href="Logout.aspx">Logout</a>
+                <asp:Label runat="server" ID="lblUsername"></asp:Label>
+                <a href="Default.aspx" id="lnkLogin" runat="server">Catre autentificare &raquo;</a>
+            </div>
+            <div class="centered">Gestiune Resurse Umane</div>
         </header>
         <nav class="navigation"><!--
             --><ul><!--
@@ -20,7 +25,7 @@
                     <a href="Default.aspx">Home</a>
                 </li><!--
                 --><li>
-                    <a href="#">Entitati</a>
+                    <a href="#">Administrare entitati</a>
                     <ul>
                         <li><a href="Angajati.aspx">Angajati</a></li>
                         <li><a href="Banci.aspx">Banci</a></li>
@@ -28,6 +33,29 @@
                         <li><a href="Studii.aspx">Studii</a></li>
                         <li><a href="Functii.aspx">Functii</a></li>
                         <li><a href="Departamente.aspx">Departamente</a></li>
+                    </ul>
+                </li><!--
+                --><li>
+                    <a href="#">Administrare concedii</a>
+                    <ul>
+                        <li><a href="Inregistrare_concediu.aspx">Inregistrare concediu</a></li>
+                        <li><a href="Concedii.aspx">Lista Concedii</a></li>
+                    </ul>
+                </li><!--
+                     --><li>
+                    <a href="#">Administrare salarii</a>
+                    <ul>
+                        <li><a href="Inregistrare_salariu.aspx">Inregistrare salariu</a></li>
+                        <li><a href="Salarii.aspx">Lista Salarii</a></li>
+                    </ul>
+                </li><!--
+
+                --><li>
+                    <a href="#">Rapoarte</a>
+                    <ul>
+                        <% foreach (string raport in rapoarte) { %>
+                        <li><a href="Rapoarte.aspx?rpt=<%= raport %>"><%= raport %></a></li>
+                        <% } %>
                     </ul>
                 </li><!--
             --></ul>

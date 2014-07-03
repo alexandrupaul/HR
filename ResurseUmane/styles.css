@@ -75,12 +75,28 @@ header {
     width: 100%;
     height: 150px;
     background: #808080;
+    position: relative;
 }
 
-    header div {
+    header .centered {
         padding: 30px;
         font-size: 55px;
     }
+    header .topbar {
+        padding: 5px;
+        background: #484848;
+        width: 100%;
+        height: 30px;
+        position: absolute;
+        top: 0px; left: 0px;
+    }
+        header .topbar span, 
+        header .topbar a {
+            color: #fff;
+            font-size: 12px;
+            margin: 0px 2px 0px 2px;
+            float: right;
+        }
 
 .centered {
     width: 960px;

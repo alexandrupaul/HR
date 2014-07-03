@@ -69,6 +69,33 @@ namespace ResurseUmane.BusinessLogic
                                                           .ExecuteNonQuery() != 0;
         }
 
+        public bool AdaugaConcediuAngajat(Entities.Entities.Concedii concediuAngajat)
+        {
+            return new Procedure("dbo.InsertConcediiAngajati").AddParameter("@An", concediuAngajat.An)
+                                                             .AddParameter("@Total_zile", concediuAngajat.TotalZile)
+                                                             .AddParameter("@Zile_ramase", concediuAngajat.ZileRamase)
+                                                             .AddParameter("@Marca_angajat", concediuAngajat.MarcaAngajat)
+                                                             .ExecuteNonQuery()!=0;
+        }
+
+
+        public string AdaugaConcediu(Entities.Entities.AlocareConcedii concediu)
+        {
+            return new Procedure("dbo.insertConcedii").AddParameter("@Marca_angajat", concediu.MarcaAngajat)
+                                                       .AddParameter("Data_start", concediu.DataStart)
+                                                       .AddParameter("Data_end", concediu.DataEnd)
+                                                       .AddParameter("Nr_zile", concediu.NrZile)
+                                                       .ExecuteScalar();
+        }
+
+        public bool AdaugaSalariu(Entities.Entities.Salarii salariu)
+        {
+            return new Procedure("dbo.insertSalarii").AddParameter("@Brut", salariu.SalariuBrut)
+                                                     .AddParameter("@Data_plata", salariu.DataSalariu)
+                                                     .ExecuteNonQuery() != 0;
+            
+        }
+
 
         public DataTable Citeste(string numeProc, List<Procedure.Parameter> parametri = null)
         {

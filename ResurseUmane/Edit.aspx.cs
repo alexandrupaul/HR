@@ -153,15 +153,9 @@ namespace ResurseUmane
 
            }
            
-           
-
-           
         }
 
        
-        
-        
-
         private DataTable GetFKs(string tableName)
         {
             return new Utils.Procedure("getLegaturi").AddParameter("@tableName", tableName).ExecuteDataTable();
