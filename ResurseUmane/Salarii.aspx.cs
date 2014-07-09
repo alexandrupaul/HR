@@ -32,25 +32,9 @@ namespace ResurseUmane
             }
         }
 
-        protected void btnAdaugaSalariu_Click(object sender, EventArgs e)
-        {
-            double brut = 0;
-            Double.TryParse(txtSalariuBrut.Text, out brut);
-            DateTime dataSalariu;
-            DateTime.TryParse(txtDataPlata.Value, out dataSalariu);
+        
 
-            lblSalarii.Text = bl.AdaugaSalariu(new Entities.Entities.Salarii()
-            {
-                SalariuBrut=brut,
-                DataSalariu=dataSalariu
-
-            }) ? "Salariul a fost adaugat" : "Salariul nu a putut fi adaugat";
-        }
-
-        protected void gridSalarii_RowCommand(object sender, EventArgs e)
-        {
-
-        }
+       
 
         protected void gridSalarii_RowCommand(object sender, GridViewCommandEventArgs e)
         {

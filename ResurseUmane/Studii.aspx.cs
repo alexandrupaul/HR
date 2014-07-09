@@ -42,8 +42,8 @@ namespace ResurseUmane
             lblStudii.Text = 
                 bl.AdaugaStudiu(new Entities.Entities.Studii() { 
                     DenumireStudii= txtDenumireStudii.Text, 
-                    Nivel=nivel, 
-                    ScutireImpozit = chkScutireImpozit.Checked 
+                    Nivel=nivel 
+                    //ScutireImpozit = chkScutireImpozit.Checked 
                 }) ? "Studiul a fost adaugat." : "Studiul nu a putut fi adaugat.";
         }
 

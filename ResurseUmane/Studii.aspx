@@ -20,14 +20,14 @@
                     <asp:TextBox ID="txtNivelStudii" runat="server"></asp:TextBox>
                 </div>
             </div>
-            <div class="row">
+           <%-- <div class="row">
                 <div class="col-1">
                     <span>Scutire impozit</span>
                 </div>
                 <div class="col-2">
                     <asp:CheckBox runat="server" ID="chkScutireImpozit" />
                 </div>
-            </div>
+            </div>--%>
             <div class="row">
                 <div class="col-1">
                     <asp:Button ID="btnAdaugaStudii" runat="server" OnClick="btnAdaugaStudiu_Click" Text="Adauga studiu" />

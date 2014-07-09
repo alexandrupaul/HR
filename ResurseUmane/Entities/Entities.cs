@@ -73,14 +73,9 @@ namespace ResurseUmane.Entities
 
         public class Salarii
         {
+            public int MarcaAngajat { get; set; }
             public double SalariuBrut { get; set; }
             public DateTime DataSalariu { get; set; }
-        }
-
-        public class AlocareSalarii
-        {
-            public int MarcaAngajat { get; set; }
-            public int IdSalariu { get; set; }
         }
     }
 }

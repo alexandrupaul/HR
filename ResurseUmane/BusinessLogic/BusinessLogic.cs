@@ -69,13 +69,13 @@ namespace ResurseUmane.BusinessLogic
                                                           .ExecuteNonQuery() != 0;
         }
 
-        public bool AdaugaConcediuAngajat(Entities.Entities.Concedii concediuAngajat)
+        public string AdaugaConcediuAngajat(Entities.Entities.Concedii concediuAngajat)
         {
             return new Procedure("dbo.InsertConcediiAngajati").AddParameter("@An", concediuAngajat.An)
                                                              .AddParameter("@Total_zile", concediuAngajat.TotalZile)
                                                              .AddParameter("@Zile_ramase", concediuAngajat.ZileRamase)
                                                              .AddParameter("@Marca_angajat", concediuAngajat.MarcaAngajat)
-                                                             .ExecuteNonQuery()!=0;
+                                                             .ExecuteScalar();
         }
 
 
@@ -88,11 +88,12 @@ namespace ResurseUmane.BusinessLogic
                                                        .ExecuteScalar();
         }
 
-        public bool AdaugaSalariu(Entities.Entities.Salarii salariu)
+        public string AdaugaSalariu(Entities.Entities.Salarii salariu)
         {
-            return new Procedure("dbo.insertSalarii").AddParameter("@Brut", salariu.SalariuBrut)
+            return new Procedure("dbo.insertSalarii").AddParameter("@Marca_angajat",salariu.MarcaAngajat)
+                                                     .AddParameter("@Brut", salariu.SalariuBrut)
                                                      .AddParameter("@Data_plata", salariu.DataSalariu)
-                                                     .ExecuteNonQuery() != 0;
+                                                     .ExecuteScalar();
             
         }
 

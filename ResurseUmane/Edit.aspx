@@ -27,7 +27,7 @@
     <form id="form1" runat="server">
     <div>
         <h2>
-            <a href="<%= Request.UrlReferrer %>">Inapoi &laquo;</a>
+            <asp:LinkButton runat="server" ID="inapoiClick"> Inapoi &laquo</asp:LinkButton>
             Editare <%= ModelType %>
         </h2>
         <br />

@@ -79,7 +79,7 @@ namespace ResurseUmane
                 ZileRamase=zileRamase,
                 MarcaAngajat = Convert.ToInt32(dropMarcaAngajat.SelectedItem.Value)
 
-            }) ? "Concediul a fost adaugat" : "Concediul nu a putut fi adaugat";
+            });
         }
 
 

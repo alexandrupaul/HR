@@ -15,13 +15,17 @@ namespace ResurseUmane
 {
     public partial class Edit : System.Web.UI.Page
     {
+        
         public string ModelType;
-
         public string id;
         public string type;
 
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
             id = Request.QueryString["id"].ToString(); // rand 
             type = ModelType = Request.QueryString["type"].ToString(); //tabela
             var dtEntitate = new BusinessLogic.BusinessLogic().EditeazaEntitate(id, type);
@@ -98,16 +102,15 @@ namespace ResurseUmane
             btnRow.Controls.Add(divClear);
             btnRow.Attributes.Add("class", "edit-row");
             panel_Form.Controls.Add(btnRow);
+
+            inapoiClick.Attributes.Add("onclick", "javascript:history.go(-1);return false");
+            
         }
 
         void btnSave_Click(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
-
             string procName = "dbo.update" + char.ToUpper(type[0]) + type.Substring(1);
-
             var list = new List <KeyValuePair<string, string>>();
-
             var paramList = new BusinessLogic.BusinessLogic().ListParams(procName);
             var listValues = new List<string>();
             Control ctrl = FindControl("panel_Form");
@@ -119,15 +122,16 @@ namespace ResurseUmane
                     {
                         listValues.Add(((TextBox)childc).Text);
                     }
+                    else if (childc is DropDownList)
+                    {
+                        listValues.Add(((DropDownList)childc).SelectedItem.Value);
+                    }
                 }
             }
-
             
            for(int i=1;i<paramList.Count;i++)
-           {
-               
-                list.Add(new KeyValuePair<string,string>(paramList[i],listValues[i-1]));
-               
+           { 
+                list.Add(new KeyValuePair<string,string>(paramList[i],listValues[i-1])); 
            }
 
            Label lbl = new Label();
@@ -145,16 +149,13 @@ namespace ResurseUmane
                    cmd.Parameters.AddWithValue(parameters.Key, parameters.Value);
                }
                lbl.Text = Convert.ToBoolean(cmd.ExecuteNonQuery()) ? "Modificarile au fost salvate cu succes!" : "Nu s-au modificat campurile!";
-
                sqlconn.Close();
            }
            catch (Exception ex)
            {
-
            }
            
         }
-
        
         private DataTable GetFKs(string tableName)
         {
@@ -177,7 +178,6 @@ namespace ResurseUmane
                     fk.to = dr["to"].ToString();
                 }
             }
-
             return fk;
         }
     }
